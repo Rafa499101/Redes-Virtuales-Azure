@@ -12,6 +12,8 @@ Crearemos nuestro grupo de recursos.
 
 Para ello nos vamos al menú principal de Azure y seleccionaremos grupo de recursos y dentro de este pulsaremos create.
 
+<img src="img/img17.PNG" style="zoom:200%;" />
+
 ![](img/img02.PNG)
 
 Le daremos el nombre de RG-vnet3.
@@ -56,6 +58,8 @@ Le pondremos el nombre ws2019ip, SKU en standard, Asignamiento Estático y ruta 
 
 En la pestaña Tags asignaremos esta máquina al departamento de Marketing.
 
+![](img/img22.PNG)
+
 Pulsaremos Revisar y Crear.
 
 Una vez pulsado eso nos saldrá la siguiente ventana.
@@ -69,4 +73,36 @@ Despues de esto pulsamos create y empezará el proceso.
 ![](img/img11.PNG)
 
 Una vez acabado el proceso, nos aparecerá en el grupo de recursos.
+
+## Paso3
+
+Crearemos una Máquina Virtual con el SO Windows 10 Pro.
+
+En el Grupo de Recursos pulsaremos el boton Create.
+
+![](img/img18.PNG)
+
+Seleccionamos Windows 10 y pulsamos el create, nos aparecerá la siguiente ventana.
+
+![](img/img19.PNG)
+
+Como en el anterior estbleceremos el nombre, la arquitectura y lo meteremos en el grupo de recursos previamente creado.
+
+![](img/img20.PNG)
+
+Creamos el usuario, y abrimos el puerto RDP, Ahora vamos a configurar la pestaña de Networking.
+
+![](img/img21.PNG)
+
+Configuraremos esta máquina para que este en la red virtual creada previamente, y en la misma subnet. Otra vez comprobaremos que el puerto RDP esta abierto.
+
+Ahora configuraremos la IP Pública, crearemos una nueva IP Pública.
+
+![](img/img13.PNG)
+
+En la pestaña tags, también asignaremos esta máquina al departameto de Márketing.
+
+![](img/img22.PNG)
+
+Presionaremos Revisar+Crear y empezará el proceso de creación de la máquina una vez acabe aparecerá en el grupo de Recursos.
 
