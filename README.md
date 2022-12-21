@@ -106,3 +106,90 @@ En la pestaña tags, también asignaremos esta máquina al departameto de Márke
 
 Presionaremos Revisar+Crear y empezará el proceso de creación de la máquina una vez acabe aparecerá en el grupo de Recursos.
 
+## Paso 4
+
+En este caso vamos a habilitar un rol de servicio Web en el Windows Server 2019 y vamos a probar a entrar tanto por la IP de la Red Virtual desde la máquina de Windows 10 como por la IP Pública desde mi propio PC.
+
+### Arrancamos las máquinas.
+
+En nuestro grupo de recursos elegimos nuestras máquinas y le damos a start.
+
+Ahora nos conectaremos desde nuestro PC abriremos un Remoto y nos conectaremos.
+
+![](img/img23.PNG)
+
+Ponemos la dirección IP Pública del windows Server y la password que pusimos y y ya estaremos dentro.
+
+![](img/img24.PNG)
+
+Haremos lo mismo con el windows 10.
+
+![](img/img25.PNG)
+
+![](img/img26.PNG)
+
+### Istalamos rol de Web Server IIS en Windows Server 2019
+
+Para esto nos vamos al server manager en manage pulsamos Add Roles and Features.
+
+![](img/img27.PNG)
+
+Continuaremos el proceso por defecto hasta llegar a la siguiente pantalla.
+
+![](img/img28.PNG)
+
+Seleccionaremos el Web Server IIS y pulsaremos instalar, una vez acabe el proceso ya nos aparecerá instalado.
+
+![](img/img29.PNG)
+
+Antes de continuar comprobaremos que tanto WIndows Server 2019 como Wondows 10 se "ven" dentro de la red, para ello haremos ping en el cmd de una a otra.
+
+Ping desde windows Server a Windows 10.
+
+![](img/img30.PNG)
+
+Ping desde Windows 10 a Windows Server.
+
+![](img/img31.PNG)
+
+Como podemos comprobar todo correcto.
+
+### Configuramos la página de inicio en Windows Server.
+
+Primero veremos la página de inicio desde la máquina de windows 10, para ello pondremos en el navegador la dirección IP del Server en en este caso 10.0.0.4.
+
+![](img/img33.PNG)
+
+Ahora vamos a configurarlo. En cmd pondremos el siguiente comando:
+
+CD C:\inetpub\wwwroot
+
+Una vez dentro de este directorio comprobamos el nombre del archivo.
+
+![](img/img32.PNG)
+
+Ejecutaremos el comando:
+
+notepad iisstart.htm
+
+Nos abrirá un bloc de notas en html como este.
+
+![](img/img34.PNG)
+
+Editamos la configuració para que nos diga Web de Rafael Román.
+
+![](img/img35.PNG)
+
+Probaremos desde mi PC, para ello pondremos la dirección IP Pública de la Máquina de Windows Server en nuestro navegador.
+
+![](img/img36.PNG)
+
+Una vez hecho esto pararemos las máquinas para que no nos suponga un gasto demasiado grande.
+
+## Paso 5 
+
+### Control de gasto
+
+![](img/img37.PNG)
+
+Hemos gastado 2USD
